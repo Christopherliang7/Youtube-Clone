@@ -20,7 +20,8 @@ describe('VideoList', function() {
     );
 
     var videoList = shallowRenderer.getRenderOutput();
-    expect(videoList.props.children).to.have.length(1);
+    console.log(videoList.props.children);
+    expect(videoList.props.children).to.have.length(1); // 2
     videoList.props.children.forEach(child => expect(child.type).to.equal(VideoListEntry));
   });
 
@@ -33,7 +34,8 @@ describe('VideoList', function() {
     );
 
     var videoList = shallowRenderer.getRenderOutput();
-    expect(videoList.props.children).to.have.length(3);
+    console.log(videoList.props.children);
+    expect(videoList.props.children).to.have.length(3); // 2
     videoList.props.children.forEach(child => expect(child.type).to.equal(VideoListEntry));
   });
 
@@ -46,7 +48,8 @@ describe('VideoList', function() {
     );
 
     var videoList = shallowRenderer.getRenderOutput();
-    expect(videoList.props.children).to.have.length(5);
+    console.log(videoList.props.children);
+    expect(videoList.props.children).to.have.length(5); // 2
     videoList.props.children.forEach(child => expect(child.type).to.equal(VideoListEntry));
   });
 });
